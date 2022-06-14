@@ -4,13 +4,6 @@ import TodoList from "./TodoList";
 function NewTodoForm() {
   const [input, setInput] = useState("");
 
-  const addTodo = (e) => {
-    // this will fire when we click the button
-    e.preventDefault();
-    console.log("im working");
-   
-  };
-
   return (
     <div className="newTodoForm">
       <form>
