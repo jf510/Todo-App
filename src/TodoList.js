@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "./TodoList.css";
+import Todo from "./Todo";
 import Button from "@mui/material/Button";
 import { FormControl, InputLabel, Input } from "@mui/material";
 
@@ -22,11 +24,10 @@ function TodoList() {
   };
 
   return (
-    <div classlist="todoList">
-      <form>
-        <h1>What's the Plan?</h1>
-
-        <FormControl>
+    <div className="todoList">
+      <h1>What's the Plan?</h1>
+      <form className="form">
+        <FormControl className="">
           <InputLabel>Write a Todo</InputLabel>
           <Input value={input} onChange={(e) => setInput(e.target.value)} />
         </FormControl>
@@ -41,9 +42,9 @@ function TodoList() {
         </Button>
       </form>
 
-      <ul>
+      <ul className="list">
         {todos.map((todo) => (
-          <li>{todo}</li>
+          <Todo text={todo} />
         ))}
       </ul>
     </div>
